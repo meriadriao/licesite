@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* ─── Colors ────────────────────────────── */
+  --color-brand-burgundy: #3D0B10;
+  --color-brand-blush: #FFDCDC;
+  --color-brand-rosy: #FFF9F7;
+  --color-brand-warm: #F0EAE3;
+  --color-brand-muted: #C4A898;
+  --color-brand-dark: #1A0A0C;
+
+  /* ─── Typography ────────────────────────── */
+  --font-display: "Baskervville", "Georgia", serif;
+  --font-sans: "Work Sans", "ui-sans-serif", "system-ui", "sans-serif";
+
+  /* ─── Font Sizes ────────────────────────── */
+  --text-display: 64px;
+  --text-h1: 48px;
+  --text-h2: 40px;
+  --text-h3: 24px;
+  --text-body: 20px;
+  --text-caption: 16px;
+  --text-label: 15px;
+
+  /* ─── Spacing ───────────────────────────── */
+  --spacing-18: 72px;
+  --spacing-22: 88px;
+  --spacing-30: 120px;
+
+  /* ─── Border Radius ─────────────────────── */
+  --radius-arch: 9999px 9999px 0 0;
+  --radius-card: 12px;
+}
+
+/* ─── Base Styles ─────────────────────────── */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-rosy);
+    color: var(--color-brand-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-brand-burgundy);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
