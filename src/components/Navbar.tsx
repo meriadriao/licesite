@@ -16,7 +16,7 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1 gap-4 text-[15px] font-semibold hidden lg:flex">
           <li>
             <Link
-              href="/"
+              href="#home"
               className="hover:text-brand-burgundy transition-colors hover:bg-transparent focus:bg-transparent"
             >
               HOME
