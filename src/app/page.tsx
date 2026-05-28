@@ -2,27 +2,7 @@ import Link from "next/link";
 
 import { ScrollReveal } from "../components/ScrollReveal";
 
-const profissionais = [
-  {
-    id: "lice-lima",
-    nome: "Lice Lima",
-    servico: "Estética e cabelo",
-    slug: "lice",
-  },
-  {
-    id: "eliana-adriao",
-    nome: "Eliana Adrião",
-    servico: "Epilação",
-    slug: "eliana",
-  },
-  {
-    id: "sara-x",
-    nome: "Sara X",
-    servico: "Manicure",
-    slug: "sara",
-  },
-  // Mais profissionais aqui (Sara)
-];
+import { profissionais } from "@/data/profissionais";
 
 const placeholders = Array.from({ length: 8 }, (_, i) => ({
   id: i,
@@ -138,7 +118,7 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 justify-items-center max-w-7xl mx-auto">
             {profissionais.map((profissional) => (
               <div
                 key={profissional.id}
@@ -487,7 +467,11 @@ export default function Home() {
                     Sábado - 09h-14h
                   </p>
                 </div>
-                
+                <Link href="#profissionais">
+            <button className="btn border-none bg-brand-blush text-brand-burgundy rounded-full shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105 uppercase font-semibold text-[15px] tracking-wide">
+              Agende Agora &rarr;
+            </button>
+          </Link>
               </div>
             </div>
 
