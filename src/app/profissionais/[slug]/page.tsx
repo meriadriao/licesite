@@ -10,8 +10,6 @@ export function generateStaticParams() {
 
 export default function ProfissionalPage({ params }: { params: { slug: string } }) {
   const profissional = profissionais.find((p) => p.slug === params.slug);
-  return (
-
   if (!profissional) {
     notFound();
   }
