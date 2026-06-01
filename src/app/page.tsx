@@ -65,7 +65,7 @@ export default function Home() {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-white rounded-card p-6 flex flex-col items-center text-center shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
+              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
                 <span className="text-[32px] font-display text-brand-burgundy mb-2">
                   1
                 </span>
@@ -77,7 +77,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-card p-6 flex flex-col items-center text-center shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
+              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
                 <span className="text-[32px] font-display text-brand-burgundy mb-2">
                   2
                 </span>
@@ -89,7 +89,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-card p-6 flex flex-col items-center text-center shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
+              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
                 <span className="text-[32px] font-display text-brand-burgundy mb-2">
                   3
                 </span>
