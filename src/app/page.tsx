@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ScrollReveal } from "../components/ScrollReveal";
@@ -18,9 +19,7 @@ export default function Home() {
         id="home"
         className="relative w-full h-[700px] bg-brand-burgundy flex flex-col items-center justify-center px-6 overflow-hidden"
       >
-        {/* FUTURE IMAGE SLOT: 
-          <img src="/your-image.jpg" alt="Hero" className="absolute inset-0 w-full h-full object-cover opacity-80" /> 
-        */}
+        <Image src="/images/foto hero section.jpg" alt="Foto em preto e branco de materiais de beleza (pentes e tesoura)." className="absolute inset-0 w-full h-full object-cover opacity-10" fill sizes="100vw" />
         <div className="z-10 flex flex-col items-center max-w-3xl mx-auto">
           <h1 className="text-[40px] md:text-[64px] font-display font-regular text-white uppercase text-center leading-[1.1] mb-6">
             Seu cabelo e sua pele em boas mãos
