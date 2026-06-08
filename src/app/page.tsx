@@ -19,8 +19,8 @@ export default function Home() {
         id="home"
         className="px-6 md:px-12 lg:px-[150px] py-12 lg:py-24 w-full"
       >
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <ScrollReveal>
+        <div className="max-w-[1440px] mx-auto">
+          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h1 className="text-[36px] md:text-[50px] lg:text-[64px] font-display text-text-dark uppercase leading-[1.1] mb-6">
               Seu cabelo<br className="hidden lg:block"/> e sua pele<br className="hidden lg:block"/> estão em <br className="lg:hidden"/><span className="italic">boas mãos</span>
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
 
           <div className="order-1 lg:order-2 flex justify-center w-full">
-            <div className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] aspect-[4/4.5] bg-brand-rosy rounded-t-[9999px] overflow-hidden relative">
+            <div className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] aspect-[4/4.5] bg-gradient-to-b from-brand-rose to-surface-white rounded-t-[9999px] overflow-hidden relative">
               <Image
                 src="/images/retrato-hero-section.png"
                 alt="Mulher de cabelo ruivo longo e pele clara de olhos fechados. Ela está sorrindo levemente, transmitindo uma sensação de calma e confiança. A imagem é iluminada suavemente, destacando a textura do cabelo e a suavidade da pele, criando um retrato sereno e acolhedor."
@@ -58,7 +58,7 @@ export default function Home() {
         className="py-22 px-6 md:px-12 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto_1.5fr] gap-12 lg:gap-16 items-center"
       >
         <ScrollReveal>
-          <div className="bg-white rounded-card p-8 md:p-10 shadow-sm border border-brand-warm">
+          <div className="bg-white rounded-card p-8 md:p-10 shadow-sm">
             <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-4 text-text-dark">
               Sobre Nós
             </h2>
@@ -73,14 +73,14 @@ export default function Home() {
         <div className="hidden lg:block w-[1px] h-3/4 bg-brand-warm mx-auto"></div>
 
         <ScrollReveal>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col w-full items-center">
             <h2 className="text-[28px] md:text-[32px] font-display italic uppercase mb-8 text-center lg:text-left text-text-dark">
               Nosso Fluxo de Agendamento
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-text-dark mb-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3">
+              <div className="bg-gradient-to-b from-brand-blush to-brand-rose rounded-card p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                <span className="text-[32px] font-display text-text-dark leading-none mb-3">
                   1
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">
@@ -91,8 +91,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-text-dark mb-2">
+              <div className="bg-gradient-to-b from-brand-blush to-brand-rose rounded-card p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                <span className="text-[32px] font-display text-text-dark leading-none mb-3">
                   2
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">
@@ -103,8 +103,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-text-dark mb-2">
+              <div className="bg-gradient-to-b from-brand-blush to-brand-rose rounded-card p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                <span className="text-[32px] font-display text-text-dark leading-none mb-3">
                   3
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">

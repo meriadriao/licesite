@@ -53,7 +53,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Utility classes for the "arch" shape and background gradient */
 .rounded-arch {
   border-radius: var(--radius-arch);
 }
