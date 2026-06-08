@@ -17,24 +17,37 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative w-full h-[700px] bg-brand-burgundy flex flex-col items-center justify-center px-6 overflow-hidden"
+        className="px-6 md:px-12 lg:px-[150px] py-12 lg:py-24 w-full"
       >
-        <Image src="/images/foto hero section.jpg" alt="Foto em preto e branco de materiais de beleza (pentes e tesoura)." className="absolute inset-0 w-full h-full object-cover opacity-15" fill sizes="100vw" />
-        <div className="z-10 flex flex-col items-center max-w-3xl mx-auto">
-          <h1 className="text-[40px] md:text-[64px] font-display font-regular text-white uppercase text-center leading-[1.1] mb-6">
-            Seu cabelo e sua pele em boas mãos
-          </h1>
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <ScrollReveal>
+            <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <h1 className="text-[36px] md:text-[50px] lg:text-[64px] font-display text-text-dark uppercase leading-[1.1] mb-6">
+              Seu cabelo<br className="hidden lg:block"/> e sua pele<br className="hidden lg:block"/> estão em <br className="lg:hidden"/><span className="italic">boas mãos</span>
+            </h1>
+            
+            <p className="text-[16px] lg:text-[18px] font-sans text-text-dark max-w-sm lg:max-w-md mb-8 leading-relaxed">
+              Um espaço com especialistas dedicadas a realçar a sua beleza natural!
+            </p>
+            
+            <Link href="#profissionais">
+              <button className="btn border-none bg-brand-rose text-white hover:brightness-95 rounded-full px-8 h-12 md:h-14 uppercase font-semibold text-[14px] md:text-[15px] tracking-wide shadow-sm transition-transform hover:scale-105">
+                Agende Agora! &rarr;
+              </button>
+            </Link>
+          </div>
 
-          <p className="text-[18px] md:text-[20px] font-sans text-white text-center mb-8 max-w-lg">
-            Um espaço com especialistas dedicadas a realçar a sua beleza
-            natural.
-          </p>
+          <div className="order-1 lg:order-2 flex justify-center w-full">
+            <div className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] aspect-[4/4.5] bg-brand-rosy rounded-t-[9999px] overflow-hidden relative">
+              <Image
+                src="public\images\retrato hero section.png"
+                alt="Mulher de cabelo ruivo longo e pele clara de olhos fechados. Ela está sorrindo levemente, transmitindo uma sensação de calma e confiança. A imagem é iluminada suavemente, destacando a textura do cabelo e a suavidade da pele, criando um retrato sereno e acolhedor."
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-          <Link href="#profissionais">
-            <button className="btn border-none bg-brand-blush text-brand-burgundy hover:brightness-95 rounded-full px-8 h-14 uppercase font-semibold text-[15px] tracking-wide">
-              Agende Agora &rarr;
-            </button>
-          </Link>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -45,7 +58,7 @@ export default function Home() {
       >
         <ScrollReveal>
           <div className="bg-white rounded-card p-8 md:p-10 shadow-sm border border-brand-warm">
-            <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-4 text-brand-burgundy">
+            <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-4 text-text-dark">
               Sobre Nós
             </h2>
             <p className="text-body text-brand-dark leading-relaxed">
@@ -60,13 +73,13 @@ export default function Home() {
 
         <ScrollReveal>
           <div className="flex flex-col items-center">
-            <h2 className="text-[28px] md:text-[32px] font-display italic uppercase mb-8 text-center lg:text-left text-brand-burgundy">
+            <h2 className="text-[28px] md:text-[32px] font-display italic uppercase mb-8 text-center lg:text-left text-text-dark">
               Nosso Fluxo de Agendamento
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-brand-burgundy mb-2">
+                <span className="text-[32px] font-display text-text-dark mb-2">
                   1
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">
@@ -78,7 +91,7 @@ export default function Home() {
               </div>
 
               <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-brand-burgundy mb-2">
+                <span className="text-[32px] font-display text-text-dark mb-2">
                   2
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">
@@ -90,7 +103,7 @@ export default function Home() {
               </div>
 
               <div className="bg-brand-warm rounded-card p-6 flex flex-col items-center text-center border border-brand-muted transition-transform duration-300 hover:scale-105">
-                <span className="text-[32px] font-display text-brand-burgundy mb-2">
+                <span className="text-[32px] font-display text-text-dark mb-2">
                   3
                 </span>
                 <p className="text-[20px] font-sans text-brand-dark">
@@ -111,7 +124,7 @@ export default function Home() {
         className="py-22 px-6 md:px-12 w-full bg-white text-center"
       >
         <ScrollReveal>
-          <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-12 text-brand-burgundy">
+          <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-12 text-text-dark">
             Nossas Profissionais
           </h2>
         </ScrollReveal>
@@ -131,7 +144,7 @@ export default function Home() {
                     )
                   </div>
 
-                  <div className="absolute inset-0 bg-brand-burgundy/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-6 gap-3 transition-all duration-300">
+                  <div className="absolute inset-0 bg-text-dark/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-6 gap-3 transition-all duration-300">
                     <svg
                       width="30"
                       height="30"
@@ -157,7 +170,7 @@ export default function Home() {
                   href={`/profissionais/${profissional.slug}`}
                   className="mt-6 flex flex-col gap-1 items-center text-center"
                 >
-                  <h3 className="text-h3 text-brand-burgundy uppercase">
+                  <h3 className="text-h3 text-text-dark uppercase">
                     {profissional.nome}
                   </h3>
                   <p className="text-caption text-brand-muted">
@@ -180,7 +193,7 @@ export default function Home() {
                   key={photo.id}
                   className={`aspect-square overflow-hidden bg-brand-warm ${index >= 4 ? "hidden md:block" : ""}`}
                 >
-                  <img
+                  <Image
                     src={photo.src}
                     alt={photo.alt}
                     className="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
@@ -203,7 +216,7 @@ export default function Home() {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill="text-brand-burgundy"
+                fill="text-text-dark"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M8.6672 12C8.6672 10.1591 10.1591 8.6664 12 8.6664C13.8409 8.6664 15.3336 10.1591 15.3336 12C15.3336 13.8409 13.8409 15.3336 12 15.3336C10.1591 15.3336 8.6672 13.8409 8.6672 12ZM6.86512 12C6.86512 14.836 9.164 17.1349 12 17.1349C14.836 17.1349 17.1349 14.836 17.1349 12C17.1349 9.164 14.836 6.86512 12 6.86512C9.164 6.86512 6.86512 9.164 6.86512 12ZM16.1382 6.66152C16.1381 6.89886 16.2084 7.13089 16.3401 7.32829C16.4719 7.52568 16.6593 7.67956 16.8785 7.77047C17.0977 7.86138 17.339 7.88525 17.5718 7.83904C17.8046 7.79283 18.0185 7.67862 18.1863 7.51087C18.3542 7.34311 18.4686 7.12934 18.515 6.89658C18.5614 6.66382 18.5377 6.42253 18.447 6.20322C18.3563 5.98392 18.2025 5.79644 18.0052 5.6645C17.808 5.53257 17.576 5.4621 17.3386 5.462H17.3382C17.02 5.46215 16.715 5.58856 16.49 5.81347C16.265 6.03837 16.1384 6.34339 16.1382 6.66152ZM7.96 20.1398C6.98504 20.0954 6.45512 19.933 6.10296 19.7958C5.63608 19.614 5.30296 19.3975 4.95272 19.0478C4.60248 18.698 4.38568 18.3652 4.20472 17.8983C4.06744 17.5463 3.90504 17.0162 3.86072 16.0413C3.81224 14.9872 3.80256 14.6706 3.80256 12.0001C3.80256 9.3296 3.81304 9.01384 3.86072 7.95888C3.90512 6.98392 4.06872 6.45488 4.20472 6.10184C4.38648 5.63496 4.60296 5.30184 4.95272 4.9516C5.30248 4.60136 5.63528 4.38456 6.10296 4.2036C6.45496 4.06632 6.98504 3.90392 7.96 3.8596C9.01408 3.81112 9.33072 3.80144 12 3.80144C14.6693 3.80144 14.9862 3.81192 16.0412 3.8596C17.0162 3.904 17.5452 4.0676 17.8982 4.2036C18.3651 4.38456 18.6982 4.60184 19.0485 4.9516C19.3987 5.30136 19.6147 5.63496 19.7965 6.10184C19.9338 6.45384 20.0962 6.98392 20.1405 7.95888C20.189 9.01384 20.1986 9.3296 20.1986 12.0001C20.1986 14.6706 20.189 14.9863 20.1405 16.0413C20.0961 17.0162 19.9329 17.5462 19.7965 17.8983C19.6147 18.3652 19.3982 18.6983 19.0485 19.0478C18.6987 19.3972 18.3651 19.614 17.8982 19.7958C17.5462 19.933 17.0162 20.0954 16.0412 20.1398C14.9871 20.1882 14.6705 20.1979 12 20.1979C9.32952 20.1979 9.01376 20.1882 7.96 20.1398ZM7.8772 2.06056C6.81264 2.10904 6.0852 2.27784 5.44992 2.52504C4.792 2.78032 4.23504 3.1228 3.67848 3.67848C3.12192 4.23416 2.78032 4.792 2.52504 5.44992C2.27784 6.0856 2.10904 6.81264 2.06056 7.8772C2.01128 8.94344 2 9.28432 2 12C2 14.7157 2.01128 15.0566 2.06056 16.1228C2.10904 17.1874 2.27784 17.9144 2.52504 18.5501C2.78032 19.2076 3.122 19.7661 3.67848 20.3215C4.23496 20.877 4.792 21.219 5.44992 21.475C6.0864 21.7222 6.81264 21.891 7.8772 21.9394C8.944 21.9879 9.28432 22 12 22C14.7157 22 15.0566 21.9887 16.1228 21.9394C17.1874 21.891 17.9144 21.7222 18.5501 21.475C19.2076 21.219 19.765 20.8772 20.3215 20.3215C20.8781 19.7658 21.219 19.2076 21.475 18.5501C21.7222 17.9144 21.8918 17.1874 21.9394 16.1228C21.9879 15.0558 21.9992 14.7157 21.9992 12C21.9992 9.28432 21.9879 8.94344 21.9394 7.8772C21.891 6.81256 21.7222 6.0852 21.475 5.44992C21.219 4.7924 20.8772 4.23504 20.3215 3.67848C19.7658 3.12192 19.2076 2.78032 18.5509 2.52504C17.9144 2.27784 17.1874 2.10824 16.1236 2.06056C15.0574 2.01208 14.7165 2 12.0008 2C9.28512 2 8.944 2.01128 7.8772 2.06056Z" />
@@ -223,7 +236,7 @@ export default function Home() {
         className="py-22 px-6 w-full max-w-7xl mx-auto flex flex-col items-center"
       >
         <ScrollReveal>
-          <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-brand-burgundy mb-12 text-center">
+          <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark mb-12 text-center">
             Depoimentos
           </h2>
         </ScrollReveal>
@@ -231,7 +244,7 @@ export default function Home() {
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="w-[270px] flex flex-col items-center text-center bg-white rounded-[24px] p-8 shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
-              <div className="flex gap-1 mb-4 text-brand-burgundy">
+              <div className="flex gap-1 mb-4 text-text-dark">
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
@@ -256,7 +269,7 @@ export default function Home() {
               </p>
             </div>
             <div className="w-[270px] flex flex-col items-center text-center bg-white rounded-[24px] p-8 shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
-              <div className="flex gap-1 mb-4 text-brand-burgundy">
+              <div className="flex gap-1 mb-4 text-text-dark">
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
@@ -284,7 +297,7 @@ export default function Home() {
             </div>
 
             <div className="w-[270px] flex flex-col items-center text-center bg-white rounded-[24px] p-8 shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105">
-              <div className="flex gap-1 mb-4 text-brand-burgundy">
+              <div className="flex gap-1 mb-4 text-text-dark">
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
@@ -316,14 +329,14 @@ export default function Home() {
       <section id="features" className="py-22 px-15 w-full max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="w-full max-w-md mx-auto lg:mx-0 h-[450px] md:h-[550px] bg-brand-burgundy relative overflow-hidden shadow-sm">
+            <div className="w-full max-w-md mx-auto lg:mx-0 h-[450px] md:h-[550px] bg-text-dark relative overflow-hidden shadow-sm">
               {/* Exemplo de como a imagem ficará depois:
                <img src="/sua-foto.jpg" alt="Profissional trabalhando" className="absolute inset-0 w-full h-full object-cover" />
              */}
             </div>
 
             <div className="flex flex-col">
-              <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-brand-burgundy mb-12 text-center lg:text-left">
+              <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark mb-12 text-center lg:text-left">
                 Por que nos escolher?
               </h2>
 
@@ -427,7 +440,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             
             <div className="flex flex-col">
-              <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-brand-burgundy mb-10 text-center lg:text-left">
+              <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark mb-10 text-center lg:text-left">
                 Nosso Endereço
               </h2>
               <div className="flex flex-col gap-6">
@@ -470,7 +483,7 @@ export default function Home() {
                   </p>
                 </div>
                 <Link href="#profissionais">
-            <button className="btn border-none bg-brand-blush text-brand-burgundy rounded-full shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105 uppercase font-semibold text-[15px] tracking-wide">
+            <button className="btn border-none bg-brand-blush text-text-dark rounded-full shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105 uppercase font-semibold text-[15px] tracking-wide">
               Agende Agora &rarr;
             </button>
           </Link>

@@ -3,15 +3,16 @@
 
 @theme {
   /* ─── Colors ────────────────────────────── */
-  --color-brand-burgundy: #3D0B10;
+  --color-brand-rose: #ECA8A8;
   --color-brand-blush: #FFDCDC;
   --color-brand-rosy: #FFF9F7;
-  --color-brand-warm: #F6ECEE;
-  --color-brand-muted: #C4A898;
-  --color-brand-dark: #1A0A0C;
+  --color-text-dark: #4A2C2C;
+  --color-text-muted: #8C6B6B;
+  --color-surface-white: #FFFFFF;
+  --color-border-light: #F0E3E3;
 
   /* ─── Typography ────────────────────────── */
-  --font-display: "Baskervville", "Georgia", serif;
+  --font-display: "Fraunces", "Georgia", serif;
   --font-sans: "Work Sans", "ui-sans-serif", "system-ui", "sans-serif";
 
   /* ─── Font Sizes ────────────────────────── */
@@ -38,13 +39,13 @@
   body {
     font-family: var(--font-sans);
     background-color: var(--color-brand-rosy);
-    color: var(--color-brand-dark);
+    color: var(--color-text-dark);
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    color: var(--color-brand-burgundy);
+    color: var(--color-text-dark);
   }
 }
 

@@ -18,9 +18,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-      </style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
       <body>
         <Navbar />
         {children}
