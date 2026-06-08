@@ -40,8 +40,9 @@ export default function Home() {
           <div className="order-1 lg:order-2 flex justify-center w-full">
             <div className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] aspect-[4/4.5] bg-brand-rosy rounded-t-[9999px] overflow-hidden relative">
               <Image
-                src="public\images\retrato hero section.png"
+                src="/images/retrato-hero-section.png"
                 alt="Mulher de cabelo ruivo longo e pele clara de olhos fechados. Ela está sorrindo levemente, transmitindo uma sensação de calma e confiança. A imagem é iluminada suavemente, destacando a textura do cabelo e a suavidade da pele, criando um retrato sereno e acolhedor."
+                fill
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
@@ -137,7 +138,7 @@ export default function Home() {
                 className="group flex flex-col items-center"
               >
                 <div className="relative w-[300px] h-[300px] rounded-arch overflow-hidden shadow-sm">
-                  <div className="absolute inset-0 bg-brand-warm flex items-center justify-center">
+                  <div className="absolute inset-0 bg-arch flex items-center justify-center">
                     <span className="text-brand-muted font-mono">
                       [Foto: 300x300]
                     </span>
@@ -191,11 +192,12 @@ export default function Home() {
               {placeholders.map((photo, index) => (
                 <div
                   key={photo.id}
-                  className={`aspect-square overflow-hidden bg-brand-warm ${index >= 4 ? "hidden md:block" : ""}`}
+                  className={`aspect-square overflow-hidden bg-brand-warm relative ${index >= 4 ? "hidden md:block" : ""}`}
                 >
                   <Image
                     src={photo.src}
                     alt={photo.alt}
+                    fill
                     className="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
                     loading="lazy"
                   />

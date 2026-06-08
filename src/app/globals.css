@@ -52,3 +52,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Utility classes for the "arch" shape and background gradient */
+.rounded-arch {
+  border-radius: var(--radius-arch);
+}
+
+.bg-arch {
+  background: linear-gradient(45deg, var(--color-brand-blush), var(--color-surface-white));
+}
