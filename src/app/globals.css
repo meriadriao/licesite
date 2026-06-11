@@ -60,3 +60,7 @@ html {
 .bg-arch {
   background: linear-gradient(45deg, var(--color-brand-blush), var(--color-surface-white));
 }
+
+.bg-review {
+  background: linear-gradient(90deg, var(--color-brand-blush), var(--color-surface-white));
+}
