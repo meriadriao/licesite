@@ -5,6 +5,11 @@ import { ScrollReveal } from "../components/ScrollReveal";
 import FeatureSlideshow from "../components/FeaturesSlideshow";
 import { profissionais } from "@/data/profissionais";
 
+const profissionalImages: Record<string, string> = {
+  lice: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?q=80&w=1000&auto=format&fit=crop",
+  eliana: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1000&auto=format&fit=crop",
+};
+
 const placeholders = Array.from({ length: 8 }, (_, i) => ({
   id: i,
   src: `/images/placeholder-${i + 1}.jpg`, // Local image
@@ -142,83 +147,47 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-12">
-            <div className="group flex flex-col items-center">
-              <div className="relative w-[280px] h-[320px] rounded-t-[9999px] overflow-hidden shadow-sm bg-brand-blush">
-                <Image
-                  src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?q=80&w=1000&auto=format&fit=crop"
-                  alt="Lice Lima"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+            {profissionais.map((profissional) => (
+              <div key={profissional.id} className="group flex flex-col items-center">
+                <div className="relative w-[280px] h-[320px] rounded-t-[9999px] overflow-hidden shadow-sm bg-brand-blush">
+                  <Image
+                    src={profissionalImages[profissional.slug] ?? "/images/placeholder-1.jpg"}
+                    alt={profissional.nome}
+                    fill
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
 
-                <div className="absolute inset-0 bg-brand-rose/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-6 gap-3 transition-all duration-500">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 25 25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18.9203 6.0505C18.7834 5.86991 18.5665 5.75324 18.3223 5.75315L9.32695 5.75C8.91265 5.74985 8.57667 6.08545 8.57653 6.49958C8.57638 6.9137 8.91212 7.24954 9.32643 7.24968L16.5172 7.2522L5.79779 17.9716C5.5049 18.2645 5.5049 18.7394 5.79779 19.0323C6.09069 19.3252 6.56556 19.3252 6.85845 19.0323L17.5725 8.31828L17.5748 15.4945C17.5749 15.9086 17.9109 16.2442 18.3252 16.2441C18.7395 16.244 19.0752 15.9081 19.0751 15.494L19.0722 6.56074C19.0853 6.38214 19.0346 6.19976 18.9203 6.0505Z"
+                  <div className="absolute inset-0 bg-brand-rose/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-6 gap-3 transition-all duration-500">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 25 25"
                       fill="currentColor"
-                    />
-                  </svg>
-                  <Link
-                    href="/profissionais/lice"
-                    className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold"
-                  >
-                    Ver Serviços
-                  </Link>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9203 6.0505C18.7834 5.86991 18.5665 5.75324 18.3223 5.75315L9.32695 5.75C8.91265 5.74985 8.57667 6.08545 8.57653 6.49958C8.57638 6.9137 8.91212 7.24954 9.32643 7.24968L16.5172 7.2522L5.79779 17.9716C5.5049 18.2645 5.5049 18.7394 5.79779 19.0323C6.09069 19.3252 6.56556 19.3252 6.85845 19.0323L17.5725 8.31828L17.5748 15.4945C17.5749 15.9086 17.9109 16.2442 18.3252 16.2441C18.7395 16.244 19.0752 15.9081 19.0751 15.494L19.0722 6.56074C19.0853 6.38214 19.0346 6.19976 18.9203 6.0505Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <Link
+                      href={`/profissionais/${profissional.slug}`}
+                      className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold"
+                    >
+                      Ver Serviços
+                    </Link>
+                  </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <h3 className="text-[24px] font-display text-text-dark">
+                    {profissional.nome}
+                  </h3>
+                  <p className="text-[14px] font-sans text-text-muted uppercase tracking-widest">
+                    {profissional.servico}
+                  </p>
                 </div>
               </div>
-              <div className="mt-6 text-center">
-                <h3 className="text-[24px] font-display text-text-dark">
-                  Lice Lima
-                </h3>
-                <p className="text-[14px] font-sans text-text-muted uppercase tracking-widest">
-                  Estética e cabelo
-                </p>
-              </div>
-            </div>
-
-            <div className="group flex flex-col items-center">
-              <div className="relative w-[280px] h-[320px] rounded-t-[9999px] overflow-hidden shadow-sm bg-brand-blush">
-                <Image
-                  src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1000&auto=format&fit=crop"
-                  alt="Eliana Adrião"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-
-                <div className="absolute inset-0 bg-brand-rose/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-6 gap-3 transition-all duration-500">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 25 25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18.9203 6.0505C18.7834 5.86991 18.5665 5.75324 18.3223 5.75315L9.32695 5.75C8.91265 5.74985 8.57667 6.08545 8.57653 6.49958C8.57638 6.9137 8.91212 7.24954 9.32643 7.24968L16.5172 7.2522L5.79779 17.9716C5.5049 18.2645 5.5049 18.7394 5.79779 19.0323C6.09069 19.3252 6.56556 19.3252 6.85845 19.0323L17.5725 8.31828L17.5748 15.4945C17.5749 15.9086 17.9109 16.2442 18.3252 16.2441C18.7395 16.244 19.0752 15.9081 19.0751 15.494L19.0722 6.56074C19.0853 6.38214 19.0346 6.19976 18.9203 6.0505Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <Link
-                    href="/profissionais/eliana"
-                    className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold"
-                  >
-                    Ver Serviços
-                  </Link>
-                </div>
-              </div>
-              <div className="mt-6 text-center">
-                <h3 className="text-[24px] font-display text-text-dark">
-                  Eliana Adrião
-                </h3>
-                <p className="text-[14px] font-sans text-text-muted uppercase tracking-widest">
-                  Epilação
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -57,15 +57,3 @@ export const profissionais = [
     servicos: []
   },
 ];
-
-{
-    id: "lice-lima",
-    slug: "lice",
-    nome: "Lice Lima",
-    servico: "Estética e cabelo",
-    bio: "Especialista em realçar sua beleza natural com técnicas avançadas e muito cuidado.",
-    instagram: { handle: "@licelimapelecabelo", url: "https://instagram.com/licelimapelecabelo" },
-    whatsapp: { display: "79 99950-8111", url: "https://wa.me/5579999508111" },
-    servicos: []
-  },
-];
