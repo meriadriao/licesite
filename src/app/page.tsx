@@ -372,7 +372,7 @@ export default function Home() {
         className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-brand-rosy"
       >
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
-          <h2 className="text-[32px] md:text-h2 font-display italic uppercase mb-10 text-text-dark text-center">
+          <h2 className="text-[32px] md:text-h2 font-display mb-12 italic uppercase text-text-dark text-center">
             Por Que Nos Escolher?
           </h2>
           <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_320px_1fr] gap-12 lg:gap-16 items-center">
