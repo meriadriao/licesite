@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ScrollReveal } from "../components/ScrollReveal";
-
+import FeatureSlideshow from "../components/FeaturesSlideshow";
 import { profissionais } from "@/data/profissionais";
 
 const placeholders = Array.from({ length: 8 }, (_, i) => ({
@@ -372,7 +372,7 @@ export default function Home() {
         className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-brand-rosy"
       >
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
-          <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark mb-16 text-center">
+          <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark text-center">
             Por Que Nos Escolher?
           </h2>
 
@@ -432,13 +432,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center order-1 lg:order-2 w-full max-w-[320px] mx-auto">
-              <div className="w-full h-[400px] md:h-[450px] bg-brand-warm relative overflow-hidden shadow-sm">
-                <Image
-                  src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop"
-                  alt="Ambiente do salão"
-                  className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale mix-blend-multiply"
-                />
-              </div>
+               <FeatureSlideshow />
             </div>
 
             <div className="flex flex-col gap-10 order-3">
@@ -548,14 +542,14 @@ export default function Home() {
                   </p>
                 </div>
                 <Link href="#profissionais">
-                  <button className="btn border-none bg-brand-blush text-text-dark rounded-full shadow-sm border border-brand-warm transition-transform duration-300 hover:scale-105 uppercase font-semibold text-[15px] tracking-wide">
+                  <button className="btn border-none bg-brand-blush text-text-dark rounded-full shadow-sm transition-transform duration-300 hover:scale-105 uppercase font-semibold text-[15px] tracking-wide">
                     Agende Agora &rarr;
                   </button>
                 </Link>
               </div>
             </div>
 
-            <div className="w-full h-[350px] md:h-[450px] rounded-[12px] overflow-hidden shadow-sm border border-brand-warm">
+            <div className="w-full h-[350px] md:h-[450px] rounded-[12px] overflow-hidden shadow-sm border border-brand-blush">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1958.7117813714317!2d-37.0707096!3d-10.9313427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3b9e6d28ff9%3A0x33c210594ca48f02!2sSalao%20Lice%20Lima%20Pele%20e%20Cabelo!5e0!3m2!1spt-BR!2sbr!4v1779975235500!5m2!1spt-BR!2sbr"
                 width="100%"
