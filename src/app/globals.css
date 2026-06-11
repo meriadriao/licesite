@@ -62,5 +62,5 @@ html {
 }
 
 .bg-review {
-  background: linear-gradient(var(--color-brand-rosy), var(--color-surface-white));
+  background: linear-gradient(0deg, var(--color-brand-rosy), var(--color-surface-white));
 }
