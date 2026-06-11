@@ -431,7 +431,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-center order-1 lg:order-2 w-full max-w-[320px] mx-auto">
+            <div className="flex justify-center sm:order-1 lg:order-2 w-full max-w-[320px] mx-auto">
                <FeatureSlideshow />
             </div>
 
