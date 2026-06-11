@@ -376,7 +376,7 @@ export default function Home() {
             Por Que Nos Escolher?
           </h2>
 
-          <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 lg:gap-16 items-center">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_320px_1fr] gap-12 lg:gap-16 items-center">
             <div className="flex flex-col gap-10 lg:text-right order-2 lg:order-1">
               <div className="flex items-center lg:justify-end gap-5">
                 <div className="flex flex-col pt-1 order-2 lg:order-1">
