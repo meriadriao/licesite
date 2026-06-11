@@ -382,12 +382,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1 order-2 lg:order-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Atendimento
-                    <br />
+                    <br className="hidden lg:block"/>
                     acolhedor
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Sinta-se em casa
-                    <br />
+                    <br className="hidden lg:block"/>
                     conosco
                   </p>
                 </div>
@@ -408,12 +408,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1 order-2 lg:order-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Preço
-                    <br />
+                    <br className="hidden lg:block"/>
                     justo
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Excelente
-                    <br />
+                    <br className="hidden lg:block"/>
                     custo-benefício
                   </p>
                 </div>
@@ -451,12 +451,12 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Confiança e<br />
+                    Confiança e<br className="hidden lg:block"/>
                     cuidado
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Profissionais
-                    <br />
+                    <br className="hidden lg:block"/>
                     excelentes
                   </p>
                 </div>
@@ -477,12 +477,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Qualidade
-                    <br />
+                    <br className="hidden lg:block"/>
                     premium
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Serviço que supera
-                    <br />
+                    <br className="hidden lg:block"/>
                     expectativas
                   </p>
                 </div>
