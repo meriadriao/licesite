@@ -385,7 +385,7 @@ export default function Home() {
                     <br />
                     acolhedor
                   </h3>
-                  <p className="font-sans text-[13px] font-bold text-text-muted uppercase tracking-wide">
+                  <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Sinta-se em casa
                     <br />
                     conosco
@@ -411,7 +411,7 @@ export default function Home() {
                     <br />
                     justo
                   </h3>
-                  <p className="font-sans text-[13px] font-bold text-text-muted uppercase tracking-wide">
+                  <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Excelente
                     <br />
                     custo-benefício
@@ -459,7 +459,7 @@ export default function Home() {
                     Confiança e<br />
                     cuidado
                   </h3>
-                  <p className="font-sans text-[13px] font-bold text-text-muted uppercase tracking-wide">
+                  <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Profissionais
                     <br />
                     excelentes
@@ -486,7 +486,7 @@ export default function Home() {
                     <br />
                     premium
                   </h3>
-                  <p className="font-sans text-[13px] font-bold text-text-muted uppercase tracking-wide">
+                  <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Serviço que supera
                     <br />
                     expectativas
