@@ -130,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* Profissionais */}
-      <section
+<section
         id="profissionais"
         className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-white"
       >
@@ -148,7 +148,11 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-12">
             {profissionais.map((profissional) => (
-              <div key={profissional.id} className="group flex flex-col items-center">
+              <Link 
+                key={profissional.id} 
+                href={`/profissionais/${profissional.slug}`}
+                className="group flex flex-col items-center cursor-pointer"
+              >
                 <div className="relative w-[280px] h-[320px] rounded-t-[9999px] overflow-hidden shadow-sm bg-brand-blush">
                   <Image
                     src={profissionalImages[profissional.slug] ?? "/images/placeholder-1.jpg"}
@@ -170,12 +174,11 @@ export default function Home() {
                         fill="currentColor"
                       />
                     </svg>
-                    <Link
-                      href={`/profissionais/${profissional.slug}`}
-                      className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold"
-                    >
+                    
+                    {/* 2. O Link interno virou uma span para evitar conflitos HTML */}
+                    <span className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold text-center leading-tight">
                       Ver Serviços
-                    </Link>
+                    </span>
                   </div>
                 </div>
                 <div className="mt-6 text-center">
@@ -186,7 +189,7 @@ export default function Home() {
                     {profissional.servico}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
