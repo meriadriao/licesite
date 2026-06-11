@@ -19,8 +19,8 @@ export default function Home() {
         id="home"
         className="px-6 md:px-12 lg:px-[150px] py-12 lg:py-24 w-full"
       >
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="max-w-[1440px] mx-auto">
+          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 items-center">
             <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
               <h1 className="text-[36px] md:text-[50px] lg:text-[64px] font-display text-text-dark uppercase leading-[1.1] mb-6">
                 Seu cabelo
@@ -224,9 +224,7 @@ export default function Home() {
       </section>
 
       {/* Instagram */}
-      <section 
-      id="instagram" 
-      className="py-22 w-full bg-transparent">
+      <section id="instagram" className="py-22 w-full bg-transparent">
         <ScrollReveal>
           <div className="relative max-w-[1440px] mx-auto overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -370,8 +368,9 @@ export default function Home() {
 
       {/* Features */}
       <section
-      id="features"
-      className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-brand-rosy">
+        id="features"
+        className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-brand-rosy"
+      >
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
           <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark mb-16 text-center">
             Por Que Nos Escolher?
@@ -420,14 +419,14 @@ export default function Home() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark order-1 lg:order-2">
                   <svg
-                      width="18"
-                      height="24"
-                      viewBox="0 0 320 512"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M136 24c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 56 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-114.9 0c-24.9 0-45.1 20.2-45.1 45.1 0 22.5 16.5 41.5 38.7 44.7l91.6 13.1c53.8 7.7 93.7 53.7 93.7 108 0 60.3-48.9 109.1-109.1 109.1l-10.9 0 0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40-72 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l130.9 0c24.9 0 45.1-20.2 45.1-45.1 0-22.5-16.5-41.5-38.7-44.7l-91.6-13.1C55.9 273.5 16 227.4 16 173.1 16 112.9 64.9 64 125.1 64l10.9 0 0-40z" />
-                    </svg>
+                    width="18"
+                    height="24"
+                    viewBox="0 0 320 512"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M136 24c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 56 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-114.9 0c-24.9 0-45.1 20.2-45.1 45.1 0 22.5 16.5 41.5 38.7 44.7l91.6 13.1c53.8 7.7 93.7 53.7 93.7 108 0 60.3-48.9 109.1-109.1 109.1l-10.9 0 0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40-72 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l130.9 0c24.9 0 45.1-20.2 45.1-45.1 0-22.5-16.5-41.5-38.7-44.7l-91.6-13.1C55.9 273.5 16 227.4 16 173.1 16 112.9 64.9 64 125.1 64l10.9 0 0-40z" />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -446,14 +445,14 @@ export default function Home() {
               <div className="flex items-center gap-5">
                 <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark">
                   <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 576 512"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M313 87.2c9.2-7.3 15-18.6 15-31.2 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 12.6 5.9 23.9 15 31.2L194.6 194.8c-10 15.7-31.3 19.6-46.2 8.4L88.9 158.7c4.5-6.4 7.1-14.3 7.1-22.7 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 21.8 17.5 39.6 39.2 40L87.8 393.5c4.7 31.3 31.6 54.5 63.3 54.5l273.8 0c31.7 0 58.6-23.2 63.3-54.5L520.8 176c21.7-.4 39.2-18.2 39.2-40 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 8.4 2.6 16.3 7.1 22.7l-59.4 44.6c-14.9 11.2-36.2 7.3-46.2-8.4L313 87.2z" />
-                    </svg>
+                    width="24"
+                    height="24"
+                    viewBox="0 0 576 512"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M313 87.2c9.2-7.3 15-18.6 15-31.2 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 12.6 5.9 23.9 15 31.2L194.6 194.8c-10 15.7-31.3 19.6-46.2 8.4L88.9 158.7c4.5-6.4 7.1-14.3 7.1-22.7 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 21.8 17.5 39.6 39.2 40L87.8 393.5c4.7 31.3 31.6 54.5 63.3 54.5l273.8 0c31.7 0 58.6-23.2 63.3-54.5L520.8 176c21.7-.4 39.2-18.2 39.2-40 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 8.4 2.6 16.3 7.1 22.7l-59.4 44.6c-14.9 11.2-36.2 7.3-46.2-8.4L313 87.2z" />
+                  </svg>
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
@@ -472,14 +471,14 @@ export default function Home() {
               <div className="flex items-center gap-5">
                 <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark">
                   <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 512 512"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M168.5 72l87.5 93 87.5-93-175 0zM383.9 99.1l-72.3 76.9 129 0-56.6-76.9zm50 124.9L78.1 224 256 420.3 433.9 224zM71.5 176l129 0-72.3-76.9-56.6 76.9zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
-                    </svg>
+                    width="24"
+                    height="24"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M168.5 72l87.5 93 87.5-93-175 0zM383.9 99.1l-72.3 76.9 129 0-56.6-76.9zm50 124.9L78.1 224 256 420.3 433.9 224zM71.5 176l129 0-72.3-76.9-56.6 76.9zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
+                  </svg>
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
