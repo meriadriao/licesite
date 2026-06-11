@@ -22,13 +22,14 @@ export default function FeatureSlideshow() {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] rounded-card overflow-hidden shadow-sm bg-brand-warm">
+    <div className="relative w-full max-w-[320px] h-[400px] rounded-card overflow-hidden shadow-sm bg-brand-warm mx-auto">
       {images.map((src, index) => (
         <Image
           key={src}
           src={src}
           alt={`Detalhe do salão ${index + 1}`}
           fill
+          sizes="(max-width: 640px) 320px, 320px"
           className={`object-cover transition-opacity duration-1000 ease-in-out ${
             index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
