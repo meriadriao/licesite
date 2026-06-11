@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/feature-1.png",
-  "/images/feature-2.png",
-  "/images/feature-3.png",
-  "/images/feature-4.png",
+  "/images/features-1.png",
+  "/images/features-2.png",
+  "/images/features-3.png",
+  "/images/features-4.png",
 ];
 
 export default function FeatureSlideshow() {
