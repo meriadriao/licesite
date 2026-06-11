@@ -381,12 +381,12 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-center lg:text-right">
                 <div className="flex flex-col pt-1 order-2 lg:order-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Atendimento
+                    Atendimento 
                     <br className="hidden lg:block"/>
                     acolhedor
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
-                    Sinta-se em casa
+                    Sinta-se em casa 
                     <br className="hidden lg:block"/>
                     conosco
                   </p>
@@ -407,12 +407,12 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-center lg:text-right">
                 <div className="flex flex-col pt-1 order-2 lg:order-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Preço
+                    Preço 
                     <br className="hidden lg:block"/>
                     justo
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
-                    Excelente
+                    Excelente 
                     <br className="hidden lg:block"/>
                     custo-benefício
                   </p>
@@ -451,11 +451,11 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Confiança e<br className="hidden lg:block"/>
+                    Confiança e <br className="hidden lg:block"/>
                     cuidado
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
-                    Profissionais
+                    Profissionais 
                     <br className="hidden lg:block"/>
                     excelentes
                   </p>
@@ -476,12 +476,12 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Qualidade
+                    Qualidade 
                     <br className="hidden lg:block"/>
                     premium
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
-                    Serviço que supera
+                    Serviço que supera 
                     <br className="hidden lg:block"/>
                     expectativas
                   </p>
