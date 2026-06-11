@@ -175,7 +175,6 @@ export default function Home() {
                       />
                     </svg>
                     
-                    {/* 2. O Link interno virou uma span para evitar conflitos HTML */}
                     <span className="text-[14px] font-sans text-text-dark uppercase tracking-[0.2em] font-semibold text-center leading-tight">
                       Ver Serviços
                     </span>
