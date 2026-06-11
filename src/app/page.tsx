@@ -378,8 +378,8 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_320px_1fr] gap-12 lg:gap-16 items-center">
             <div className="flex flex-col gap-10 lg:text-right order-2 lg:order-1">
 
-              <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-center lg:text-right">
-                <div className="flex flex-col pt-1 order-2 lg:order-1">
+              <div className="flex flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-left lg:text-right">
+                <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Atendimento 
                     <br className="hidden lg:block"/>
@@ -391,7 +391,7 @@ export default function Home() {
                     conosco
                   </p>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark order-1 lg:order-2">
+                <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark">
                   <svg
                     width="24"
                     height="24"
@@ -404,8 +404,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-center lg:text-right">
-                <div className="flex flex-col pt-1 order-2 lg:order-1">
+              <div className="flex flex-row items-center justify-center lg:justify-end gap-3 lg:gap-5 text-left lg:text-right">
+                <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Preço 
                     <br className="hidden lg:block"/>
@@ -417,7 +417,7 @@ export default function Home() {
                     custo-benefício
                   </p>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark order-1 lg:order-2">
+                <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark">
                   <svg
                     width="18"
                     height="24"
@@ -437,7 +437,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-10 order-3">
 
-              <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 lg:gap-5 text-center lg:text-left">
+              <div className="flex flex-row items-center justify-center lg:justify-start gap-3 lg:gap-5 text-left lg:text-left">
                 <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark order-1">
                   <svg
                     width="24"
@@ -462,7 +462,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 lg:gap-5 text-center lg:text-left">
+              <div className="flex flex-row items-center justify-center lg:justify-start gap-3 lg:gap-5 text-left lg:text-left">
                 <div className="w-16 h-16 rounded-full bg-brand-blush flex items-center justify-center shrink-0 text-text-dark order-1">
                   <svg
                     width="24"
