@@ -1,5 +1,3 @@
-TypeScript
-
 import Link from "next/link";
 import { profissionais } from "@/data/profissionais";
 import { notFound } from "next/navigation";
