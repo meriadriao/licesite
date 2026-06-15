@@ -71,7 +71,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="#profissionais"
+                href="/#profissionais"
                 className="py-3 text-[15px] font-semibold hover:text-brand-burgundy"
               >
                 PROFISSIONAIS
