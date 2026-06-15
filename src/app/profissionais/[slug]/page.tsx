@@ -1,3 +1,5 @@
+TypeScript
+
 import Link from "next/link";
 import { profissionais } from "@/data/profissionais";
 import { notFound } from "next/navigation";
@@ -8,8 +10,11 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProfissionalPage({ params }: { params: { slug: string } }) {
-  const profissional = profissionais.find((p) => p.slug === params.slug);
+export default async function ProfissionalPage({ params }: { params: Promise<{ slug: string }> }) {
+  
+  const { slug } = await params;
+  
+  const profissional = profissionais.find((p) => p.slug === slug);
 
   if (!profissional) {
     return notFound();
