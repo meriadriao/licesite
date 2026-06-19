@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { profissionais } from "@/data/profissionais";
 import { notFound } from "next/navigation";
 
@@ -17,6 +16,13 @@ export default async function ProfissionalPage({ params }: { params: Promise<{ s
   if (!profissional) {
     return notFound();
   }
+
+  const epilacaoService = profissional.servicos.find((service) =>
+    service.categoria.toLowerCase().includes("epil")
+  );
+  const extraServices = profissional.servicos.filter(
+    (service) => service !== epilacaoService
+  );
 
   return (
     <main className="min-h-screen bg-brand-rosy py-12 px-6 md:px-12 lg:px-[150px]">
@@ -59,41 +65,77 @@ export default async function ProfissionalPage({ params }: { params: Promise<{ s
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8">
-            
-            <div className="bg-brand-rosy border border-border-light rounded-[24px] p-6 lg:p-10 w-full">
-              <div className="flex items-center gap-3 mb-8 text-text-muted">
-                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c-4-4-4-9-4-12 0-2 1-4 4-6 3 2 4 4 4 6 0 3 0 8-4 12z"/><path d="M12 22c-8-4-8-12-8-12s3-2 8 4"/><path d="M12 22c8-4 8-12 8-12s-3-2-8 4"/></svg>
-                 <h4 className="text-[26px] font-display">Epilação</h4>
-              </div>
-              
-              <div className="columns-1 md:columns-2 gap-x-12 space-y-3">
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Virilha Simples</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$40</span></p>
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Virilha Cavada</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$50</span></p>
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Virilha Completa</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$60</span></p>
-                <br className="hidden md:block" />
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Antebraço</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$35</span></p>
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Braço</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$50</span></p>
-                <p className="font-sans text-[15px] leading-relaxed break-inside-avoid"><span className="text-text-muted">Costas</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$70</span></p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-6 lg:gap-8">
-              
+            {epilacaoService ? (
               <div className="bg-brand-rosy border border-border-light rounded-[24px] p-6 lg:p-10 w-full">
                 <div className="flex items-center gap-3 mb-8 text-text-muted">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                  <h4 className="text-[26px] font-display">Design de sobrancelhas</h4>
+                  <h4 className="text-[26px] font-display">{epilacaoService.categoria}</h4>
                 </div>
-                <div className="flex flex-col gap-3">
-                  <p className="font-sans text-[15px] leading-relaxed"><span className="text-text-muted">Design Simples</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$30</span></p>
-                  <p className="font-sans text-[15px] leading-relaxed"><span className="text-text-muted">Design com Henna</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$50</span></p>
-                  <p className="font-sans text-[15px] leading-relaxed"><span className="text-text-muted">Coloração</span> <span className="mx-1 text-text-muted/40">—</span> <span className="italic text-text-muted">R$40</span></p>
+                <div className="columns-1 md:columns-2 gap-x-12 space-y-3">
+                  {epilacaoService.itens.map((item, itemIndex) =>
+                    item.nome ? (
+                      <p
+                        key={`${item.nome}-${itemIndex}`}
+                        className="font-sans text-[15px] leading-relaxed break-inside-avoid"
+                      >
+                        <span className="text-text-muted">{item.nome}</span>
+                        <span className="mx-1 text-text-muted/40">—</span>
+                        <span className="italic text-text-muted">{item.preco}</span>
+                      </p>
+                    ) : (
+                      <div
+                        key={`spacer-${itemIndex}`}
+                        className="h-4"
+                      />
+                    )
+                  )}
                 </div>
               </div>
+            ) : (
+              <div className="bg-brand-rosy border border-border-light rounded-[24px] p-6 lg:p-10 w-full">
+                <p className="font-sans text-[15px] text-text-muted">Serviços não cadastrados.</p>
+              </div>
+            )}
+
+            <div className="flex flex-col gap-6 lg:gap-8">
+              {extraServices.map((service, serviceIndex) => (
+                <div
+                  key={`${service.categoria}-${serviceIndex}`}
+                  className="bg-brand-rosy border border-border-light rounded-[24px] p-6 lg:p-10 w-full"
+                >
+                  <div className="flex items-center gap-3 mb-8 text-text-muted">
+                    <h4 className="text-[26px] font-display">{service.categoria}</h4>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    {service.itens.map((item, itemIndex) =>
+                      item.nome ? (
+                        <p
+                          key={`${item.nome}-${itemIndex}`}
+                          className="font-sans text-[15px] leading-relaxed"
+                        >
+                          <span className="text-text-muted">{item.nome}</span>
+                          <span className="mx-1 text-text-muted/40">—</span>
+                          <span className="italic text-text-muted">{item.preco}</span>
+                        </p>
+                      ) : (
+                        <div
+                          key={`spacer-${itemIndex}`}
+                          className="h-4"
+                        />
+                      )
+                    )}
+                  </div>
+                </div>
+              ))}
 
               <div className="bg-white border border-brand-rose rounded-[24px] p-6 lg:p-8 w-full flex flex-col justify-center">
-                 <h4 className="font-sans text-[16px] font-bold text-text-dark tracking-wide mb-2 uppercase">Agenda Aberta!</h4>
-                 <p className="font-sans text-[15px] text-text-dark leading-relaxed">Terça à Sexta - 09h - 18h<br/>Sábado - 09h - 14h</p>
+                <h4 className="font-sans text-[16px] font-bold text-text-dark tracking-wide mb-2 uppercase">
+                  Agenda Aberta!
+                </h4>
+                <p className="font-sans text-[15px] text-text-dark leading-relaxed">
+                  Terça à Sexta - 09h - 18h
+                  <br />
+                  Sábado - 09h - 14h
+                </p>
               </div>
 
             </div>
