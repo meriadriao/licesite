@@ -31,7 +31,7 @@ export default function Home() {
                 Seu cabelo
                 <br className="hidden lg:block" /> e sua pele
                 <br className="hidden lg:block" /> estão em{" "}
-                <br className="lg:hidden" />
+                <br className="hidden lg:block" />
                 <span className="italic">boas mãos</span>
               </h1>
 
@@ -130,12 +130,12 @@ export default function Home() {
       </section>
 
       {/* Profissionais */}
-<section
+      <section
         id="profissionais"
         className="py-22 px-6 md:px-12 lg:px-[150px] w-full bg-white"
       >
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 items-start">
-          <div className="flex flex-col text-center lg:text-left lg:sticky lg:top-32">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col text-center lg:text-left lg:top-32">
             <h2 className="text-[32px] md:text-h2 font-display italic uppercase text-text-dark leading-tight mb-4">
               Nossas
               <br className="hidden lg:block" /> Profissionais
@@ -146,7 +146,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-12">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-center gap-12">
             {profissionais.map((profissional) => (
               <Link 
                 key={profissional.id} 
@@ -353,12 +353,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Atendimento 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     acolhedor
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Sinta-se em casa 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     conosco
                   </p>
                 </div>
@@ -379,12 +379,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Preço 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     justo
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Excelente 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     custo-benefício
                   </p>
                 </div>
@@ -422,12 +422,12 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
-                    Confiança e <br className="hidden lg:block"/>
+                    Confiança e <br className="lg:block"/>
                     cuidado
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Profissionais 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     excelentes
                   </p>
                 </div>
@@ -448,12 +448,12 @@ export default function Home() {
                 <div className="flex flex-col pt-1">
                   <h3 className="font-display text-[22px] leading-tight text-text-dark mb-1">
                     Qualidade 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     premium
                   </h3>
                   <p className="font-sans text-[13px] font-medium text-text-muted tracking-wide">
                     Serviço que supera 
-                    <br className="hidden lg:block"/>
+                    <br className="lg:block"/>
                     expectativas
                   </p>
                 </div>

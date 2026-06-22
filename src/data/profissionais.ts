@@ -9,7 +9,7 @@ export const profissionais = [
     whatsapp: { display: "79 98879-5758", url: "https://wa.me/5579988795758" },
     servicos: [
       {
-        icone: { src: "public\images\woman-eyebrow.svg" },
+        icone: { src: "public/images/woman-eyebrow.svg" },
         categoria: "Design de sobrancelhas",
         itens: [
           { nome: "Design Simples", preco: "R$30" },
@@ -18,7 +18,7 @@ export const profissionais = [
         ]
       },
       {
-        icone: { src: "public\images\facial-cream.svg" },
+        icone: { src: "public/images/facial-cream.svg" },
         categoria: "Epilação",
         itens: [
           { nome: "Virilha Simples", preco: "R$40" },

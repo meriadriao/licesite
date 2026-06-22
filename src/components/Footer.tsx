@@ -8,8 +8,7 @@ export default function Footer() {
   const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 
   return (
-    // Fundo bordeaux com o mesmo padding lateral luxuoso do mapa
-    <footer className="bg-brand-burgundy py-10 px-6 md:px-12 lg:px-[150px] w-full text-white mt-auto leading-tight">
+    <footer className="bg-footer py-10 px-6 md:px-12 lg:px-[150px] w-full text-white mt-auto leading-tight">
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-5">
         
         <div className="font-display text-[18px] md:text-[20px] uppercase tracking-widest text-center lg:text-left">
