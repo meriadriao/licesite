@@ -4,11 +4,7 @@ import Link from "next/link";
 import { ScrollReveal } from "../components/ScrollReveal";
 import FeatureSlideshow from "../components/FeaturesSlideshow";
 import { profissionais } from "@/data/profissionais";
-
-export const profissionalImages: Record<string, string> = {
-  lice: "public/images/perfil-lice.jpg",
-  eliana: "public/images/perfil-eliana.jpg",
-};
+import { profissionalImages } from "@/data/profissionalImages";
 
 const placeholders = Array.from({ length: 8 }, (_, i) => ({
   id: i,

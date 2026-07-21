@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { profissionais } from "@/data/profissionais";
 import { notFound } from "next/navigation";
-import { profissionalImages } from "@/app/page";
+import { profissionalImages } from "@/data/profissionalImages";
 
 export function generateStaticParams() {
   return profissionais.map((profissional) => ({
