@@ -42,7 +42,7 @@ export default async function ProfissionalPage({ params }: { params: Promise<{ s
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
           <div className="w-full aspect-[4/5] lg:aspect-[3/4] bg-brand-blush rounded-[32px] overflow-hidden shadow-sm relative">
-             {/* <Image src={profissional.foto} alt={profissional.nome} fill className="object-cover" /> */}
+             {<Image src={profissionalImages[profissional.slug]} alt={profissional.nome} fill className="object-cover" />}
           </div>
 
           <div className="flex flex-col justify-center">
@@ -178,7 +178,7 @@ export default async function ProfissionalPage({ params }: { params: Promise<{ s
                 <p className="font-sans text-[15px] text-text-dark leading-relaxed">
                   Terça à Sexta - 09h - 18h
                   <br />
-                  Sábado - 09h - 14h
+                  Sábado - 09h - 12h
                 </p>
               </div>
 
@@ -190,7 +190,7 @@ export default async function ProfissionalPage({ params }: { params: Promise<{ s
           <h3 className="text-[32px] md:text-h2 font-display italic text-text-dark">Ficou interessada?</h3>
           <Link href={profissional.whatsapp.url} target="_blank" className="w-full">
             <button className="w-full btn border-none bg-footer text-white hover:brightness-95 rounded-full px-8 h-14 uppercase font-display semi-bold text-[14px] tracking-widest shadow-sm transition-transform hover:scale-[1.02]">
-              Agende seu horário agora! &rarr;
+              Agende seu horário! &rarr;
             </button>
           </Link>
         </div>

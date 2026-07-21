@@ -6,13 +6,13 @@ import FeatureSlideshow from "../components/FeaturesSlideshow";
 import { profissionais } from "@/data/profissionais";
 
 const profissionalImages: Record<string, string> = {
-  lice: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?q=80&w=1000&auto=format&fit=crop",
-  eliana: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1000&auto=format&fit=crop",
+  lice: "public/images/perfil-lice.jpg",
+  eliana: "public/images/perfil-eliana.jpg",
 };
 
 const placeholders = Array.from({ length: 8 }, (_, i) => ({
   id: i,
-  src: `/images/placeholder-${i + 1}.jpg`, // Local image
+  src: `/images/insta-${i + 1}.jpg`, // Local image
   alt: `Instagram photo ${i + 1}`,
 }));
 
@@ -466,7 +466,7 @@ export default function Home() {
       {/* Mapa */}
       <section
         id="local"
-        className="py-22 px-6 md:px-12 lg:px-[150px] max-w-[1440px] mx-auto w-full bg-white"
+        className="py-22 px-6 md:px-12 lg:px-[150px] mx-auto w-full bg-white"
       >
         <ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
