@@ -5,7 +5,7 @@ import { ScrollReveal } from "../components/ScrollReveal";
 import FeatureSlideshow from "../components/FeaturesSlideshow";
 import { profissionais } from "@/data/profissionais";
 
-const profissionalImages: Record<string, string> = {
+export const profissionalImages: Record<string, string> = {
   lice: "public/images/perfil-lice.jpg",
   eliana: "public/images/perfil-eliana.jpg",
 };
