@@ -1,7 +1,48 @@
-export const profissionais = [
+// ─── Tipos ───────────────────────────────────────────────────────────────
+
+export type ItemLista = { nome: string; preco: string };
+
+export type CategoriaLista = {
+  icone?: { src: string };
+  categoria: string;
+  itens: ItemLista[]; // { nome: "", preco: "" } vira um espaçamento entre grupos
+};
+
+export type ItemCatalogo = {
+  nome: string;
+  descricao: string; // curta, máx. duas linhas
+  preco: string;
+  imagem?: string; // ex.: "/images/servicos/hidratacao.jpg"
+};
+
+export type CategoriaCatalogo = {
+  categoria: string;
+  itens: ItemCatalogo[];
+};
+
+type ProfissionalBase = {
+  id: string;
+  slug: string;
+  nome: string;
+  servico: string;
+  bio: string;
+  instagram: { handle: string; url: string };
+  whatsapp: { display: string; url: string };
+};
+
+// "lista"    -> tabela de serviços com preços (ex.: Eliana)
+// "catalogo" -> cards com foto, descrição e preço, em carrossel por categoria (ex.: Lice)
+export type Profissional =
+  | (ProfissionalBase & { layout: "lista"; servicos: CategoriaLista[] })
+  | (ProfissionalBase & { layout: "catalogo"; catalogo: CategoriaCatalogo[] });
+
+// ─── Dados ───────────────────────────────────────────────────────────────
+
+export const profissionais: Profissional[] = [
   {
     id: "eliana-adriao",
     slug: "eliana",
+    layout: "lista",
     nome: "Eliana Adrião",
     servico: "Epilação",
     bio: "Apaixonada pelo que faz, Eliana leva a sério cada detalhe. Para ela, cuidar de você vai muito além de um procedimento.",
@@ -9,16 +50,16 @@ export const profissionais = [
     whatsapp: { display: "79 98879-5758", url: "https://wa.me/5579988795758" },
     servicos: [
       {
-        icone: { src: "public/images/woman-eyebrow.svg" },
+        icone: { src: "/images/woman-eyebrow.svg" },
         categoria: "Design de sobrancelhas",
         itens: [
           { nome: "Design Simples", preco: "R$30" },
           { nome: "Design com Henna", preco: "R$50" },
-          { nome: "Coloração", preco: "R$40" }
-        ]
+          { nome: "Coloração", preco: "R$40" },
+        ],
       },
       {
-        icone: { src: "public/images/facial-cream.svg" },
+        icone: { src: "/images/facial-cream.svg" },
         categoria: "Epilação",
         itens: [
           { nome: "Virilha Simples", preco: "R$40" },
@@ -26,36 +67,55 @@ export const profissionais = [
           { nome: "Virilha Completa", preco: "R$60" },
           { nome: "Perianal", preco: "R$30" },
           { nome: "Nádegas", preco: "R$40" },
-          { nome: "", preco: "" }, 
+          { nome: "", preco: "" },
           { nome: "Perna inteira", preco: "R$60" },
           { nome: "Meia perna", preco: "R$40" },
           { nome: "Dedos do pé", preco: "R$10" },
-          { nome: "", preco: "" }, 
+          { nome: "", preco: "" },
           { nome: "Axila", preco: "R$30" },
           { nome: "Antebraço", preco: "R$35" },
           { nome: "Braço", preco: "R$50" },
           { nome: "Abdomen", preco: "R$50" },
           { nome: "Umbigo", preco: "R$15" },
           { nome: "Costas", preco: "R$70" },
-          { nome: "", preco: "" }, 
+          { nome: "", preco: "" },
           { nome: "Buço", preco: "R$25" },
           { nome: "Nariz", preco: "R$25" },
           { nome: "Faixa", preco: "R$20" },
           { nome: "Mento", preco: "R$20" },
-          { nome: "", preco: "" }, 
-          { nome: "Spa dos pés", preco: "R$50" }
-        ]
-      }
-    ]
+          { nome: "", preco: "" },
+          { nome: "Spa dos pés", preco: "R$50" },
+        ],
+      },
+    ],
   },
   {
     id: "lice-lima",
     slug: "lice",
+    layout: "catalogo",
     nome: "Lice Lima",
     servico: "Estética e cabelo",
     bio: "Especialista em realçar sua beleza natural com técnicas avançadas e muito cuidado.",
     instagram: { handle: "@licelimapelecabelo", url: "https://instagram.com/licelimapelecabelo" },
     whatsapp: { display: "79 99950-8111", url: "https://wa.me/5579999508111" },
-    servicos: []
+    // TODO: trocar os placeholders pelos serviços reais da Lice
+    catalogo: [
+      {
+        categoria: "Estética",
+        itens: [
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+        ],
+      },
+      {
+        categoria: "Cabelo",
+        itens: [
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+          { nome: "Nome do serviço", descricao: "Explicação curta, no máximo duas linhas.", preco: "R$ VALOR" },
+        ],
+      },
+    ],
   },
 ];
